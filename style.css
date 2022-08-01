@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #131313;
+  color:#C0C0C4;
+  max-height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#tap-to-start{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background: #131313;
+  color: white;
+  z-index: 2;
+}
+#tap-to-start h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: opacitystartup 1s cubic-bezier(0.5,0.3,0.3,0.5) both;
+}
+
+
+h2{
+  color: white;
+}
+
+.title{
+  text-align: center;
+  margin: 30px 0;
+}
+.you{
+  width: 50%;
+  text-align: center;
+}
+.you div{
+  margin-top: 50px;
+}
+.computer{
+  width: 50%;
+  float: right;
+  text-align: center;
+}
+.computer div{
+  margin-top: 50px;
+}
+.choices{
+  text-align: center;
+  width: 100%;
+}
+button{
+  color: #E7E7E8;
+  border: 1px solid #81E7D7;
+  border-radius: 2px;
+  background-color: #363636;
+  padding: 10px 20px;
+}
+#computer-score{
+  color: #FF7E7E;
+  width: 50%;
+  float: right;
+  text-align: center;
+}
+#your-score{
+  text-align: center;
+  color: #7CC1FF;
+}
+.score-board{
+  margin: 1em 0;
+}
+
+
+.play{
+  text-align: center;
+  margin: 50px 0;
+}
+#play-game{
+  color: white;
+  font-weight: bolder;
+  width: 150px;
+  height: 50px;
+  background-color: black;
+}
+img{
+  width: 100px;
+}
+
+/*difficulty text choice --the span--*/
+#difficulty{
+  color: #6FFF98;
+  font-style: italic;
+}
+
+.feather-tool{
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.feather-rotate-ccw{
+  position: absolute;
+  left: 2em;
+  top: 2em;
+}
+
+/*difficulty container*/
+.difficulty{
+  font-size: .8rem;
+  display: none;
+  margin: 0 15vw;
+}
+
+.open-difficulty{
+  display: block;
+}
+
+.difficulty button{
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: .8rem;
+}
+#impossible-btn{
+  border: none;
+  color: #FF6F6F;
+}
+#normal-btn{
+  border: none;
+  color: #6FFF98;
+}
+#announce{
+  font-family: monospace;
+  text-align: center;
+  color: #81E7D7;
+  min-height: 6vh;
+  padding-top: 1em;
+}
+#computer-choice{
+  animation: readycomp 1s cubic-bezier(0.5,0.3,0.3,0.5), float 1s 1s ease-in-out infinite;
+}
+#your-choice{
+  animation: readyyou 1s cubic-bezier(0.5,0.3,0.3,0.5), float 1s 1s ease-in-out infinite;;
+}
+
+#computer-choice div, #your-choice div{
+  animation: float 1s 1s ease-in-out infinite;
+}
+
+
+
+
+.game-container {
+  min-height: 10vh;
+}
+
+footer{
+  margin: 2rem 0;
+  text-align: center;
+}
+footer a{
+  color: #81E7D7;
+  
+}
+
+
+/* MOBILE SCREEN*/
+@media screen and (max-width: 767px){
+  .game-container{
+  min-height: 25vh;
+}
+}
+
+
+
+@keyframes readycomp{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(-35%)
+  }
+}
+@keyframes readyyou{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(35%)
+  }
+}
+
+@keyframes opacity{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes opacitystartup{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-5px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate-ccw{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(-190deg)
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
