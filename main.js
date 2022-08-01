@@ -29,15 +29,15 @@ document.getElementById('scissor-btn').addEventListener('click', chooseScissor)
 
 function chooseRock(){
   yourChoice = 'rock'
-  yourEl.innerHTML = '<img style="animation: readyyou .5s cubic-bezier(0.5,0.3,0.3,0.5)" src="/img/rock.png" alt="rock picture">'
+  yourEl.innerHTML = '<img style="animation: readyyou .5s cubic-bezier(0.5,0.3,0.3,0.5)" src="./img/rock.png" alt="rock picture">'
 }
 function choosePaper(){
   yourChoice = 'paper'
-  yourEl.innerHTML = '<img style="animation: readyyou .5s cubic-bezier(0.5,0.3,0.3,0.5)" src="/img/paper.png" alt="Paper Picture">'
+  yourEl.innerHTML = '<img style="animation: readyyou .5s cubic-bezier(0.5,0.3,0.3,0.5)" src="./img/paper.png" alt="Paper Picture">'
 }
 function chooseScissor(){
   yourChoice = 'scissor'
-  yourEl.innerHTML = '<img style="animation: readyyou .5s cubic-bezier(0.5,0.3,0.3,0.5)"  src="/img/scissor.png" alt="Scissor Picture">'
+  yourEl.innerHTML = '<img style="animation: readyyou .5s cubic-bezier(0.5,0.3,0.3,0.5)"  src="./img/scissor.png" alt="Scissor Picture">'
 }
 
 
@@ -111,11 +111,11 @@ function playGame(){
   
   
   if(computerChoice === 'rock'){
-    computerEl.innerHTML = '<img style="animation: readycomp .5s cubic-bezier(0.5,0.3,0.3,0.5)" src="/img/computer-rock.png" alt="rock picture">'
+    computerEl.innerHTML = '<img style="animation: readycomp .5s cubic-bezier(0.5,0.3,0.3,0.5)" src="./img/computer-rock.png" alt="rock picture">'
   }else if(computerChoice === 'paper'){
-    computerEl.innerHTML = '<img style="animation: readycomp .5s cubic-bezier(0.5,0.3,0.3,0.5)" src="/img/computer-paper.png" alt="Paper Picture">'
+    computerEl.innerHTML = '<img style="animation: readycomp .5s cubic-bezier(0.5,0.3,0.3,0.5)" src="./img/computer-paper.png" alt="Paper Picture">'
   }else if(computerChoice === 'scissor'){
-    computerEl.innerHTML = '<img style="animation: readycomp .5s cubic-bezier(0.5,0.3,0.3,0.5)"  src="/img/computer-scissor.png" alt="Scissor Picture">'
+    computerEl.innerHTML = '<img style="animation: readycomp .5s cubic-bezier(0.5,0.3,0.3,0.5)"  src="./img/computer-scissor.png" alt="Scissor Picture">'
   }
   
   if (yourChoice === 'rock') {
@@ -171,8 +171,8 @@ computerChoice = ''
 yourChoice = ''
 
 setTimeout(function(){
-  yourEl.innerHTML = '<img style="animation: opacity .5s ease-in-out" src="/img/default.png" alt="rock picture">'
-  computerEl.innerHTML = '<img style="transform: rotateY(180deg); animation: opacity .5s ease-in-out" src="/img/default.png" alt="rock picture">'
+  yourEl.innerHTML = '<img style="animation: opacity .5s ease-in-out" src="./img/default.png" alt="rock picture">'
+  computerEl.innerHTML = '<img style="transform: rotateY(180deg); animation: opacity .5s ease-in-out" src="./img/default.png" alt="rock picture">'
 }, 600)
 
   if(yourScore === 5){
@@ -211,8 +211,8 @@ function retry(){
   yourScore = 0
   displayScore()
   
-    yourEl.innerHTML = '<img style="animation: opacity .5s ease-in-out" src="/img/default.png" alt="rock picture">'
-    computerEl.innerHTML = '<img style="transform: rotateY(180deg); animation: opacity .5s ease-in-out" src="/img/default.png" alt="rock picture">'
+    yourEl.innerHTML = '<img style="animation: opacity .5s ease-in-out" src="./img/default.png" alt="rock picture">'
+    computerEl.innerHTML = '<img style="transform: rotateY(180deg); animation: opacity .5s ease-in-out" src="./img/default.png" alt="rock picture">'
   
   document.querySelector("body").style.animation = "opacity 1s"
 }
