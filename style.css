@@ -139,7 +139,7 @@ img{
   text-align: center;
   color: #81E7D7;
   min-height: 6vh;
-  padding-top: 1em;
+  padding: 1em 1em 0 1em;
 }
 #computer-choice{
   animation: readycomp 1s cubic-bezier(0.5,0.3,0.3,0.5), float 1s 1s ease-in-out infinite;
