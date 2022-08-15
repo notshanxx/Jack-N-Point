@@ -5,7 +5,7 @@
 body{
   background-color: #131313;
   color:#C0C0C4;
-  max-height: 100vh;
+  min-height: 100vh;
   font-family: 'Times New Roman', Times, serif;
 }
 
